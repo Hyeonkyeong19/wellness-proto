@@ -1,6 +1,7 @@
 {
   "name": "wellness-proto",
   "version": "1.0.0",
+
   "description": "スマートフォン向けの簡易ウェルネス管理Webアプリのプロトタイプです。運動と食事の記録を行い、データの可視化やAIによる簡易アドバイスを表示します。",
   "main": "server.js",
   "scripts": {
