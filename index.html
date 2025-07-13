@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Proto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+</head>
+<body>
+<div id="home-screen" class="screen">
+    <h1>ホーム</h1>
+    <div id="chart-area">
+        <canvas id="dataChart"></canvas>
+    </div>
+    <div id="ai-area">
+        <p id="ai-advice">AIからのアドバイスがここに表示されます</p>
+    </div>
+    <div id="button-area">
+        <button id="go-training">トレーニング</button>
+        <button id="go-meal">食事</button>
+    </div>
+</div>
+<div id="training-screen" class="screen hidden">
+    <h1>トレーニング</h1>
+    <video id="input_video" playsinline></video>
+    <canvas id="output_canvas" class="output"></canvas>
+    <button id="end-training">終了</button>
+</div>
+<div id="result-screen" class="screen hidden">
+    <h1>トレーニング結果</h1>
+    <p id="result-date"></p>
+    <p id="result-summary"></p>
+    <button id="save-result">保存</button>
+</div>
+<div id="meal-screen" class="screen hidden">
+    <h1>食事記録</h1>
+    <input type="file" id="meal-image" accept="image/*" />
+    <div id="meal-result"></div>
+    <button id="back-home">戻る</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
